@@ -50,13 +50,13 @@ class _cartpageState extends State<cartpage> {
     final Size size= MediaQuery.of(context).size;
     String value;
 
-    firstFieldTotal+=firstFieldprice * firstFieldquentity;
-    secondFieldTotal+=secondFieldprice * secondFieldquentity;
-    thirdFieldTotal+=thirdFieldprice * thirdFieldquentity;
-    fourthFieldTotal+=fourthFieldprice * fourthFieldquentity;
-    fifthFieldTotal+=fifthFieldprice * fifthFieldquentity;
+    firstFieldTotal=firstFieldprice * firstFieldquentity;
+    secondFieldTotal=secondFieldprice * secondFieldquentity;
+    thirdFieldTotal=thirdFieldprice * thirdFieldquentity;
+    fourthFieldTotal=fourthFieldprice * fourthFieldquentity;
+    fifthFieldTotal=fifthFieldprice * fifthFieldquentity;
 
-    Total += fifthFieldTotal+secondFieldTotal+thirdFieldTotal+fourthFieldTotal+fifthFieldTotal;
+    Total = firstFieldTotal+secondFieldTotal+thirdFieldTotal+fourthFieldTotal+fifthFieldTotal;
 
     return Scaffold(
       backgroundColor: Colors.amber,
@@ -201,6 +201,8 @@ class _cartpageState extends State<cartpage> {
                                   onPressed: (){
 
                                     setState(() {
+                                      if(firstFieldquentity == 9)
+                                        return firstFieldquentity=9;
                                       firstFieldquentity++;
                                     });
                                   }
@@ -289,6 +291,8 @@ class _cartpageState extends State<cartpage> {
                                   onPressed: (){
 
                                     setState(() {
+                                      if(secondFieldquentity == 9)
+                                        return secondFieldquentity=9;
                                       secondFieldquentity++;
                                     });
                                   }
@@ -376,6 +380,8 @@ class _cartpageState extends State<cartpage> {
                                   onPressed: (){
 
                                     setState(() {
+                                      if(thirdFieldquentity == 9)
+                                        return thirdFieldquentity=9;
                                       thirdFieldquentity++;
                                     });
                                   }
@@ -463,6 +469,8 @@ class _cartpageState extends State<cartpage> {
                                   onPressed: (){
 
                                     setState(() {
+                                      if(fourthFieldquentity == 9)
+                                        return fourthFieldquentity=9;
                                       fourthFieldquentity++;
                                     });
                                   }
@@ -550,6 +558,8 @@ class _cartpageState extends State<cartpage> {
                                   onPressed: (){
 
                                     setState(() {
+                                      if(fifthFieldquentity == 9)
+                                        return fifthFieldquentity=9;
                                       fifthFieldquentity++;
                                     });
                                   }
